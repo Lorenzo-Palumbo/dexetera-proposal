@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dexetera — Digital Marketing Proposal</title>
+<title>Dexetera — Proposta Marketing</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -11,20 +11,14 @@
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
-    --bg:        #0a0c0f;
-    --surface:   #111418;
-    --surface2:  #161b22;
-    --border:    #1e2530;
-    --accent:    #00e5a0;
-    --accent2:   #0095ff;
-    --warn:      #f59e0b;
-    --danger:    #ef4444;
-    --text:      #e8edf2;
-    --muted:     #6b7a8d;
-    --t1:        #00e5a0;
-    --t2:        #0095ff;
-    --t3:        #8b5cf6;
-    --tn:        #374151;
+    --bg:      #0a0c0f;
+    --surface: #111418;
+    --border:  #1e2530;
+    --accent:  #00e5a0;
+    --accent2: #0095ff;
+    --warn:    #f59e0b;
+    --text:    #e8edf2;
+    --muted:   #6b7a8d;
   }
 
   html { scroll-behavior: smooth; }
@@ -38,7 +32,6 @@
     overflow-x: hidden;
   }
 
-  /* Grid background */
   body::before {
     content: '';
     position: fixed;
@@ -51,127 +44,78 @@
     z-index: 0;
   }
 
-  .wrap { max-width: 960px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+  .wrap { max-width: 900px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
 
-  /* ─── TYPOGRAPHY ─────────────────────────────── */
-  h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 800; line-height: 1.1; }
-  h2 { font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 700; line-height: 1.2; }
-  h3 { font-size: 1.1rem; font-weight: 700; }
+  h1 { font-size: clamp(1.8rem, 5vw, 2.8rem); font-weight: 800; line-height: 1.15; }
+  h2 { font-size: clamp(1.3rem, 3vw, 1.8rem); font-weight: 700; line-height: 1.2; }
+  h3 { font-size: 1rem; font-weight: 700; }
   p  { color: var(--muted); line-height: 1.8; }
 
-  .mono {
-    font-family: 'DM Mono', monospace;
-    font-size: .72rem;
-    letter-spacing: .08em;
-    font-weight: 500;
-  }
+  .mono { font-family: 'DM Mono', monospace; font-size: .72rem; letter-spacing: .06em; }
 
-  /* ─── NAV ────────────────────────────────────── */
+  /* NAV */
   nav {
     position: sticky; top: 0; z-index: 100;
-    background: rgba(10,12,15,.85);
+    background: rgba(10,12,15,.9);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border);
     padding: 14px 0;
   }
-  nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
-  .nav-logo { font-size: .85rem; font-weight: 700; color: var(--accent); display: flex; align-items: center; gap: 8px; }
-  .nav-logo span { color: var(--muted); font-weight: 400; font-family: 'DM Mono', monospace; font-size: .75rem; }
+  nav .wrap { display: flex; align-items: center; justify-content: space-between; }
+  .nav-logo { font-size: .85rem; font-weight: 700; color: var(--accent); }
+  .nav-logo span { color: var(--muted); font-family: 'DM Mono', monospace; font-size: .72rem; font-weight: 400; margin-left: 8px; }
   .nav-links { display: flex; gap: 24px; }
   .nav-links a { color: var(--muted); text-decoration: none; font-size: .85rem; transition: color .2s; }
   .nav-links a:hover { color: var(--text); }
 
-  /* ─── SECTION ────────────────────────────────── */
-  section { padding: 96px 0; }
+  /* SECTIONS */
+  section { padding: 80px 0; }
   section + section { border-top: 1px solid var(--border); }
 
-  .section-label {
-    display: inline-flex; align-items: center; gap: 8px;
-    background: rgba(0,229,160,.08);
+  .label {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: 'DM Mono', monospace; font-size: .68rem;
+    padding: 4px 10px; border-radius: 4px;
+    margin-bottom: 20px;
+    background: rgba(0,229,160,.07);
     border: 1px solid rgba(0,229,160,.2);
     color: var(--accent);
-    padding: 4px 12px; border-radius: 4px;
-    margin-bottom: 24px;
   }
-  .section-label.blue {
-    background: rgba(0,149,255,.08);
-    border-color: rgba(0,149,255,.2);
-    color: var(--accent2);
-  }
-  .section-label.purple {
-    background: rgba(139,92,246,.08);
-    border-color: rgba(139,92,246,.2);
-    color: #a78bfa;
-  }
-  .section-label.warn {
-    background: rgba(245,158,11,.08);
-    border-color: rgba(245,158,11,.2);
-    color: var(--warn);
-  }
+  .label.blue { background: rgba(0,149,255,.07); border-color: rgba(0,149,255,.2); color: var(--accent2); }
+  .label.warn { background: rgba(245,158,11,.07); border-color: rgba(245,158,11,.2); color: var(--warn); }
 
-  /* ─── HERO ───────────────────────────────────── */
-  #hero {
-    padding: 120px 0 96px;
-    position: relative;
-    overflow: hidden;
-  }
-  #hero::after {
-    content: '';
-    position: absolute;
-    top: -200px; right: -200px;
-    width: 600px; height: 600px;
-    background: radial-gradient(circle, rgba(0,229,160,.08) 0%, transparent 70%);
-    pointer-events: none;
-  }
-  .hero-eyebrow {
+  /* HERO */
+  #hero { padding: 100px 0 80px; }
+  .hero-tag {
     display: inline-flex; align-items: center; gap: 8px;
-    margin-bottom: 28px;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 32px;
-    padding: 6px 16px;
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 32px; padding: 6px 14px; margin-bottom: 28px;
   }
-  .hero-eyebrow .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); animation: pulse 2s infinite; }
+  .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); animation: pulse 2s infinite; }
   @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.3} }
-  .hero-eyebrow span { font-family: 'DM Mono', monospace; font-size: .72rem; color: var(--muted); }
 
-  #hero h1 { margin-bottom: 24px; }
   #hero h1 em { font-style: normal; color: var(--accent); }
-  #hero .sub {
-    font-size: 1.1rem; color: var(--muted); max-width: 620px;
-    margin-bottom: 40px; line-height: 1.7;
-  }
-  .cta-row { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 64px; }
+  .sub { font-size: 1rem; color: var(--muted); max-width: 580px; margin: 16px 0 36px; }
 
   .btn {
-    display: inline-flex; align-items: center; gap: 8px;
-    padding: 13px 28px; border-radius: 6px;
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 12px 24px; border-radius: 6px;
     font-family: 'Syne', sans-serif; font-size: .9rem; font-weight: 600;
-    text-decoration: none; cursor: pointer; border: none;
-    transition: all .2s;
+    text-decoration: none; border: none; cursor: pointer; transition: all .2s;
   }
-  .btn-primary {
-    background: var(--accent); color: #000;
-  }
+  .btn-primary { background: var(--accent); color: #000; }
   .btn-primary:hover { background: #00c98c; transform: translateY(-1px); }
-  .btn-outline {
-    background: transparent;
-    border: 1px solid var(--border);
-    color: var(--text);
-  }
-  .btn-outline:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-1px); }
+  .btn-outline { background: transparent; border: 1px solid var(--border); color: var(--text); }
+  .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+  .cta-row { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 56px; }
 
-  /* Stat bar */
   .stat-bar {
-    display: grid; grid-template-columns: repeat(4, 1fr);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    overflow: hidden;
-    background: var(--surface);
+    display: grid; grid-template-columns: repeat(4,1fr);
+    border: 1px solid var(--border); border-radius: 10px;
+    overflow: hidden; background: var(--surface);
   }
   .stat-item {
-    padding: 24px 20px;
-    border-right: 1px solid var(--border);
+    padding: 20px 16px; border-right: 1px solid var(--border);
     position: relative;
   }
   .stat-item:last-child { border-right: none; }
@@ -180,236 +124,180 @@
     top: 0; left: 0; right: 0; height: 2px;
     background: linear-gradient(90deg, var(--accent), transparent);
   }
-  .stat-val { font-size: 1.5rem; font-weight: 800; color: var(--accent); display: block; }
-  .stat-label { font-family: 'DM Mono', monospace; font-size: .68rem; color: var(--muted); margin-top: 4px; }
+  .stat-val { font-size: 1.4rem; font-weight: 800; color: var(--accent); display: block; }
+  .stat-lbl { font-family: 'DM Mono', monospace; font-size: .65rem; color: var(--muted); margin-top: 4px; }
 
-  /* ─── PROBLEM ─────────────────────────────────── */
-  .problem-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 40px; }
-  .problem-card {
+  /* CARDS GENERICHE */
+  .card {
     background: var(--surface); border: 1px solid var(--border);
     border-radius: 8px; padding: 24px;
-    position: relative; overflow: hidden;
     transition: border-color .2s;
   }
-  .problem-card:hover { border-color: rgba(0,229,160,.25); }
-  .problem-card .icon { font-size: 1.4rem; margin-bottom: 12px; display: block; }
-  .problem-card h3 { color: var(--text); margin-bottom: 8px; font-size: 1rem; }
-  .problem-card p { font-size: .9rem; }
-  .problem-card.highlight {
-    border-color: rgba(0,229,160,.3);
-    background: linear-gradient(135deg, rgba(0,229,160,.05), var(--surface));
-  }
-  .problem-card.highlight h3 { color: var(--accent); }
+  .card:hover { border-color: rgba(0,229,160,.2); }
+  .card h3 { color: var(--text); margin-bottom: 8px; }
+  .card p { font-size: .88rem; }
+  .card .icon { font-size: 1.3rem; margin-bottom: 10px; display: block; }
 
-  /* ─── FRAMES ──────────────────────────────────── */
-  .frames-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-top: 40px; }
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 32px; }
+  .grid-3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; margin-top: 32px; }
+
+  /* FRAME CARDS */
   .frame-card {
     background: var(--surface); border: 1px solid var(--border);
-    border-radius: 10px; padding: 28px 24px;
-    position: relative; overflow: hidden;
-    transition: transform .2s, border-color .2s;
+    border-radius: 10px; padding: 26px 22px;
+    transition: transform .2s;
   }
-  .frame-card:hover { transform: translateY(-4px); }
-  .frame-number {
-    font-family: 'DM Mono', monospace; font-size: 3.5rem; font-weight: 500;
-    line-height: 1; color: rgba(255,255,255,.04);
-    position: absolute; top: 16px; right: 20px;
-  }
+  .frame-card:hover { transform: translateY(-3px); }
+  .frame-card:nth-child(1) { border-top: 2px solid var(--accent); }
+  .frame-card:nth-child(2) { border-top: 2px solid var(--accent2); }
+  .frame-card:nth-child(3) { border-top: 2px solid #8b5cf6; }
   .frame-tag {
     font-family: 'DM Mono', monospace; font-size: .65rem;
-    padding: 3px 8px; border-radius: 3px; display: inline-block;
-    margin-bottom: 16px; font-weight: 500;
+    padding: 3px 8px; border-radius: 3px;
+    display: inline-block; margin-bottom: 14px;
   }
-  .frame-card:nth-child(1) { border-top: 2px solid var(--accent); }
-  .frame-card:nth-child(1) .frame-tag { background: rgba(0,229,160,.12); color: var(--accent); }
-  .frame-card:nth-child(2) { border-top: 2px solid var(--accent2); }
-  .frame-card:nth-child(2) .frame-tag { background: rgba(0,149,255,.12); color: var(--accent2); }
-  .frame-card:nth-child(3) { border-top: 2px solid #8b5cf6; }
-  .frame-card:nth-child(3) .frame-tag { background: rgba(139,92,246,.12); color: #a78bfa; }
-  .frame-card h3 { font-size: 1.05rem; margin-bottom: 12px; color: var(--text); }
-  .frame-card p { font-size: .88rem; line-height: 1.7; }
-  .frame-use {
-    margin-top: 20px; padding-top: 16px;
-    border-top: 1px solid var(--border);
-    font-family: 'DM Mono', monospace; font-size: .68rem;
-    color: var(--muted);
+  .frame-card:nth-child(1) .frame-tag { background: rgba(0,229,160,.1); color: var(--accent); }
+  .frame-card:nth-child(2) .frame-tag { background: rgba(0,149,255,.1); color: var(--accent2); }
+  .frame-card:nth-child(3) .frame-tag { background: rgba(139,92,246,.1); color: #a78bfa; }
+  .frame-card h3 { font-size: 1rem; margin-bottom: 10px; }
+  .frame-card p { font-size: .86rem; }
+  .frame-when {
+    margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--border);
+    font-family: 'DM Mono', monospace; font-size: .66rem; color: var(--muted);
   }
-  .frame-use strong { color: var(--text); }
+  .frame-when strong { color: var(--text); }
 
-  /* ─── CHANNELS ────────────────────────────────── */
-  .tier-block { margin-top: 40px; }
-  .tier-header {
-    display: flex; align-items: center; gap: 12px;
-    margin-bottom: 16px;
-  }
+  /* CANALI */
+  .tier-block { margin-top: 32px; }
+  .tier-head { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
   .tier-badge {
-    font-family: 'DM Mono', monospace; font-size: .7rem; font-weight: 500;
-    padding: 4px 10px; border-radius: 4px;
+    font-family: 'DM Mono', monospace; font-size: .68rem;
+    padding: 3px 10px; border-radius: 4px;
   }
-  .tier1 .tier-badge { background: rgba(0,229,160,.12); color: var(--accent); border: 1px solid rgba(0,229,160,.25); }
-  .tier2 .tier-badge { background: rgba(0,149,255,.12); color: var(--accent2); border: 1px solid rgba(0,149,255,.25); }
-  .tier3 .tier-badge { background: rgba(139,92,246,.12); color: #a78bfa; border: 1px solid rgba(139,92,246,.25); }
-  .tiern .tier-badge { background: rgba(55,65,81,.3); color: var(--muted); border: 1px solid var(--border); }
-  .tier-desc { font-size: .82rem; color: var(--muted); font-family: 'DM Mono', monospace; }
+  .t1 .tier-badge { background: rgba(0,229,160,.1); color: var(--accent); border: 1px solid rgba(0,229,160,.2); }
+  .t2 .tier-badge { background: rgba(0,149,255,.1); color: var(--accent2); border: 1px solid rgba(0,149,255,.2); }
+  .t3 .tier-badge { background: rgba(139,92,246,.1); color: #a78bfa; border: 1px solid rgba(139,92,246,.2); }
+  .tn .tier-badge { background: rgba(55,65,81,.2); color: var(--muted); border: 1px solid var(--border); }
+  .tier-desc { font-size: .8rem; color: var(--muted); font-family: 'DM Mono', monospace; }
 
-  .channel-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; }
-  .channel-grid.two { grid-template-columns: repeat(2,1fr); }
-  .channel-grid.four { grid-template-columns: repeat(4,1fr); }
-  .channel-card {
-    background: var(--surface); border-radius: 8px; padding: 18px 16px;
-    border: 1px solid var(--border);
-    transition: border-color .2s;
+  .ch-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; }
+  .ch-grid.two { grid-template-columns: repeat(2,1fr); }
+  .ch-grid.four { grid-template-columns: repeat(4,1fr); }
+  .ch {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 8px; padding: 16px;
   }
-  .tier1 .channel-card { border-left: 3px solid var(--accent); }
-  .tier2 .channel-card { border-left: 3px solid var(--accent2); }
-  .tier3 .channel-card { border-left: 3px solid #8b5cf6; }
-  .tiern .channel-card { border-left: 3px solid var(--tn); opacity: .6; }
-  .channel-card:hover { border-color: var(--border); }
-  .tier1 .channel-card:hover { border-color: rgba(0,229,160,.4); }
-  .tier2 .channel-card:hover { border-color: rgba(0,149,255,.4); }
-  .channel-name { font-size: .9rem; font-weight: 700; color: var(--text); margin-bottom: 6px; }
-  .channel-note { font-size: .78rem; color: var(--muted); line-height: 1.5; }
+  .t1 .ch { border-left: 3px solid var(--accent); }
+  .t2 .ch { border-left: 3px solid var(--accent2); }
+  .t3 .ch { border-left: 3px solid #8b5cf6; }
+  .tn .ch { border-left: 3px solid #374151; opacity: .55; }
+  .ch-name { font-size: .9rem; font-weight: 700; color: var(--text); margin-bottom: 5px; }
+  .ch-note { font-size: .78rem; color: var(--muted); line-height: 1.5; }
 
-  /* ─── TIMELINE ────────────────────────────────── */
-  .timeline { margin-top: 56px; position: relative; }
-  .timeline-track {
+  /* TIMELINE */
+  .timeline { margin-top: 48px; }
+  .tl-track {
     display: grid; grid-template-columns: repeat(3,1fr);
     gap: 0; position: relative;
   }
-  .timeline-track::before {
-    content: '';
-    position: absolute;
-    top: 28px; left: calc(100%/6); right: calc(100%/6);
+  .tl-track::before {
+    content: ''; position: absolute;
+    top: 27px; left: calc(100%/6); right: calc(100%/6);
     height: 2px;
     background: linear-gradient(90deg, var(--accent), var(--accent2), #8b5cf6);
   }
-  .phase-col {
-    position: relative; padding: 0 12px;
-    display: flex; flex-direction: column; align-items: center;
-  }
-  .phase-node {
-    width: 56px; height: 56px; border-radius: 50%;
+  .ph-col { padding: 0 10px; display: flex; flex-direction: column; align-items: center; }
+  .ph-node {
+    width: 54px; height: 54px; border-radius: 50%;
     display: flex; align-items: center; justify-content: center;
-    font-family: 'DM Mono', monospace; font-size: .75rem; font-weight: 500;
-    position: relative; z-index: 1; margin-bottom: 24px;
-    flex-shrink: 0;
+    font-family: 'DM Mono', monospace; font-size: .72rem;
+    position: relative; z-index: 1; margin-bottom: 20px; flex-shrink: 0;
   }
-  .phase-col:nth-child(1) .phase-node { background: rgba(0,229,160,.12); border: 2px solid var(--accent); color: var(--accent); }
-  .phase-col:nth-child(2) .phase-node { background: rgba(0,149,255,.12); border: 2px solid var(--accent2); color: var(--accent2); }
-  .phase-col:nth-child(3) .phase-node { background: rgba(139,92,246,.12); border: 2px solid #8b5cf6; color: #a78bfa; }
+  .ph-col:nth-child(1) .ph-node { background: rgba(0,229,160,.1); border: 2px solid var(--accent); color: var(--accent); }
+  .ph-col:nth-child(2) .ph-node { background: rgba(0,149,255,.1); border: 2px solid var(--accent2); color: var(--accent2); }
+  .ph-col:nth-child(3) .ph-node { background: rgba(139,92,246,.1); border: 2px solid #8b5cf6; color: #a78bfa; }
 
-  .phase-card {
+  .ph-card {
     background: var(--surface); border: 1px solid var(--border);
-    border-radius: 10px; padding: 24px 20px; width: 100%;
+    border-radius: 10px; padding: 22px 18px; width: 100%;
   }
-  .phase-col:nth-child(1) .phase-card { border-top: 2px solid var(--accent); }
-  .phase-col:nth-child(2) .phase-card { border-top: 2px solid var(--accent2); }
-  .phase-col:nth-child(3) .phase-card { border-top: 2px solid #8b5cf6; }
+  .ph-col:nth-child(1) .ph-card { border-top: 2px solid var(--accent); }
+  .ph-col:nth-child(2) .ph-card { border-top: 2px solid var(--accent2); }
+  .ph-col:nth-child(3) .ph-card { border-top: 2px solid #8b5cf6; }
 
-  .phase-timing {
-    font-family: 'DM Mono', monospace; font-size: .65rem;
-    color: var(--muted); margin-bottom: 8px;
+  .ph-timing { font-family: 'DM Mono', monospace; font-size: .63rem; color: var(--muted); margin-bottom: 6px; }
+  .ph-title { font-size: .95rem; font-weight: 700; margin-bottom: 8px; }
+  .ph-col:nth-child(1) .ph-title { color: var(--accent); }
+  .ph-col:nth-child(2) .ph-title { color: var(--accent2); }
+  .ph-col:nth-child(3) .ph-title { color: #a78bfa; }
+  .ph-goal { font-size: .8rem; color: var(--muted); margin-bottom: 14px; }
+
+  .ph-actions { list-style: none; margin-bottom: 18px; }
+  .ph-actions li {
+    font-size: .78rem; color: var(--muted);
+    padding: 5px 0; border-bottom: 1px solid rgba(30,37,48,.8);
+    display: flex; gap: 8px;
   }
-  .phase-title { font-size: 1rem; font-weight: 700; margin-bottom: 6px; }
-  .phase-col:nth-child(1) .phase-title { color: var(--accent); }
-  .phase-col:nth-child(2) .phase-title { color: var(--accent2); }
-  .phase-col:nth-child(3) .phase-title { color: #a78bfa; }
+  .ph-actions li::before { content: '→'; flex-shrink: 0; }
+  .ph-col:nth-child(1) .ph-actions li::before { color: var(--accent); }
+  .ph-col:nth-child(2) .ph-actions li::before { color: var(--accent2); }
+  .ph-col:nth-child(3) .ph-actions li::before { color: #a78bfa; }
 
-  .phase-goal { font-size: .8rem; color: var(--muted); margin-bottom: 16px; line-height: 1.5; }
-  .phase-actions { list-style: none; margin-bottom: 20px; }
-  .phase-actions li {
-    font-size: .8rem; color: var(--muted); padding: 5px 0;
-    border-bottom: 1px solid rgba(30,37,48,.8);
-    display: flex; gap: 8px; align-items: flex-start;
-  }
-  .phase-actions li::before { content: '→'; flex-shrink: 0; margin-top: 1px; }
-  .phase-col:nth-child(1) .phase-actions li::before { color: var(--accent); }
-  .phase-col:nth-child(2) .phase-actions li::before { color: var(--accent2); }
-  .phase-col:nth-child(3) .phase-actions li::before { color: #a78bfa; }
+  .kpi-block { padding-top: 14px; border-top: 1px solid var(--border); }
+  .kpi-lbl { font-family: 'DM Mono', monospace; font-size: .6rem; color: var(--muted); margin-bottom: 8px; }
+  .kpi-list { display: flex; flex-direction: column; gap: 5px; }
+  .kpi-item { font-family: 'DM Mono', monospace; font-size: .7rem; padding: 5px 9px; border-radius: 4px; background: rgba(255,255,255,.03); }
+  .ph-col:nth-child(1) .kpi-item { color: var(--accent); border: 1px solid rgba(0,229,160,.1); }
+  .ph-col:nth-child(2) .kpi-item { color: var(--accent2); border: 1px solid rgba(0,149,255,.1); }
+  .ph-col:nth-child(3) .kpi-item { color: #a78bfa; border: 1px solid rgba(139,92,246,.1); }
 
-  .kpi-block { padding-top: 16px; border-top: 1px solid var(--border); }
-  .kpi-label { font-family: 'DM Mono', monospace; font-size: .62rem; color: var(--muted); margin-bottom: 10px; letter-spacing: .06em; }
-  .kpi-list { display: flex; flex-direction: column; gap: 6px; }
-  .kpi-item {
-    font-family: 'DM Mono', monospace; font-size: .72rem;
-    padding: 6px 10px; border-radius: 4px;
-    background: rgba(255,255,255,.03);
-  }
-  .phase-col:nth-child(1) .kpi-item { color: var(--accent); border: 1px solid rgba(0,229,160,.12); }
-  .phase-col:nth-child(2) .kpi-item { color: var(--accent2); border: 1px solid rgba(0,149,255,.12); }
-  .phase-col:nth-child(3) .kpi-item { color: #a78bfa; border: 1px solid rgba(139,92,246,.12); }
-
-  /* ─── WARNINGS ────────────────────────────────── */
-  .warn-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-top: 40px; }
+  /* WARNINGS */
   .warn-card {
-    background: var(--surface); border: 1px solid rgba(245,158,11,.2);
-    border-radius: 10px; padding: 28px 24px;
-    border-top: 3px solid var(--warn);
-    transition: border-color .2s;
-  }
-  .warn-card:hover { border-color: rgba(245,158,11,.4); }
-  .warn-badge {
-    font-family: 'DM Mono', monospace; font-size: .65rem;
-    background: rgba(245,158,11,.1); color: var(--warn);
-    padding: 3px 9px; border-radius: 3px;
-    display: inline-block; margin-bottom: 16px;
-  }
-  .warn-card h3 { color: var(--text); font-size: 1rem; margin-bottom: 10px; }
-  .warn-card p { font-size: .85rem; line-height: 1.7; }
-
-  /* ─── FOOTER ──────────────────────────────────── */
-  #footer {
-    padding: 80px 0;
-    text-align: center;
     background: var(--surface);
-    border-top: 1px solid var(--border);
+    border: 1px solid rgba(245,158,11,.18);
+    border-top: 2px solid var(--warn);
+    border-radius: 10px; padding: 24px;
   }
-  .footer-cta-label {
-    font-family: 'DM Mono', monospace; font-size: .72rem;
-    color: var(--accent); letter-spacing: .1em; margin-bottom: 20px;
+  .warn-badge {
+    font-family: 'DM Mono', monospace; font-size: .63rem;
+    background: rgba(245,158,11,.08); color: var(--warn);
+    padding: 3px 8px; border-radius: 3px;
+    display: inline-block; margin-bottom: 12px;
   }
-  #footer h2 { font-size: clamp(1.5rem, 3vw, 2.2rem); margin-bottom: 16px; }
-  #footer p { max-width: 520px; margin: 0 auto 36px; font-size: .92rem; }
+  .warn-card h3 { font-size: .95rem; margin-bottom: 8px; }
+  .warn-card p { font-size: .84rem; }
+
+  /* FOOTER */
+  #footer { padding: 72px 0; text-align: center; background: var(--surface); }
+  #footer h2 { margin-bottom: 12px; }
+  #footer p { max-width: 480px; margin: 0 auto 28px; font-size: .9rem; }
   .footer-link {
-    display: inline-flex; align-items: center; gap: 6px;
-    color: var(--accent); text-decoration: none; font-size: .85rem;
-    font-family: 'DM Mono', monospace;
-    margin-top: 32px; padding-top: 32px;
-    border-top: 1px solid var(--border);
-    width: 100%;
-    justify-content: center;
+    display: inline-block; margin-top: 28px; padding-top: 28px;
+    border-top: 1px solid var(--border); width: 100%;
+    color: var(--accent); text-decoration: none;
+    font-family: 'DM Mono', monospace; font-size: .8rem;
   }
   .footer-link:hover { color: var(--text); }
-  .footer-meta { color: var(--muted); font-size: .8rem; margin-top: 16px; font-family: 'DM Mono', monospace; }
+  .footer-note { color: var(--muted); font-size: .75rem; margin-top: 12px; font-family: 'DM Mono', monospace; }
 
-  /* ─── DIVIDER ─────────────────────────────────── */
-  .divider { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
-
-  /* ─── RESPONSIVE ──────────────────────────────── */
-  @media (max-width: 768px) {
-    section { padding: 64px 0; }
+  /* RESPONSIVE */
+  @media (max-width: 720px) {
+    section { padding: 56px 0; }
     .stat-bar { grid-template-columns: repeat(2,1fr); }
     .stat-item:nth-child(2) { border-right: none; }
     .stat-item:nth-child(3) { border-top: 1px solid var(--border); }
-    .problem-grid { grid-template-columns: 1fr; }
-    .frames-grid { grid-template-columns: 1fr; }
-    .channel-grid { grid-template-columns: 1fr 1fr; }
-    .channel-grid.four { grid-template-columns: 1fr 1fr; }
-    .timeline-track { grid-template-columns: 1fr; }
-    .timeline-track::before { display: none; }
-    .phase-node { margin-bottom: 16px; }
-    .phase-col { margin-bottom: 32px; }
-    .warn-grid { grid-template-columns: 1fr; }
+    .grid-2, .grid-3, .ch-grid, .ch-grid.four { grid-template-columns: 1fr; }
+    .tl-track { grid-template-columns: 1fr; }
+    .tl-track::before { display: none; }
+    .ph-col { margin-bottom: 28px; }
     .nav-links { display: none; }
+    .cta-row { flex-direction: column; }
+    .btn { justify-content: center; }
   }
-  @media (max-width: 480px) {
-    .channel-grid { grid-template-columns: 1fr; }
-    .channel-grid.four { grid-template-columns: 1fr; }
+  @media (max-width: 420px) {
     .stat-bar { grid-template-columns: 1fr; }
     .stat-item { border-right: none !important; border-bottom: 1px solid var(--border); }
     .stat-item:last-child { border-bottom: none; }
-    .cta-row { flex-direction: column; }
-    .btn { justify-content: center; }
   }
 </style>
 </head>
@@ -418,15 +306,13 @@
 <!-- NAV -->
 <nav>
   <div class="wrap">
-    <div class="nav-logo">
-      DEXETERA <span>// DIGITAL MARKETING PROPOSAL</span>
-    </div>
+    <div class="nav-logo">DEXETERA <span>// PROPOSTA MARKETING</span></div>
     <div class="nav-links">
-      <a href="#problem">Problem</a>
-      <a href="#frames">Narrative</a>
-      <a href="#channels">Channels</a>
-      <a href="#plan">Plan</a>
-      <a href="#notes">Notes</a>
+      <a href="#problema">Problema</a>
+      <a href="#narrativa">Narrativa</a>
+      <a href="#canali">Canali</a>
+      <a href="#piano">Piano</a>
+      <a href="#note">Note</a>
     </div>
   </div>
 </nav>
@@ -434,330 +320,310 @@
 <!-- HERO -->
 <section id="hero">
   <div class="wrap">
-    <div class="hero-eyebrow">
+    <div class="hero-tag">
       <span class="dot"></span>
-      <span class="mono">CONFIDENTIAL — DIGITAL MARKETING PROPOSAL 2025</span>
+      <span class="mono">PROPOSTA MARKETING — DEXETERA 2025</span>
     </div>
 
-    <h1>From Waitlist to<br><em>DeFi Authority</em> —<br>A Marketing Roadmap<br>for Dexetera</h1>
+    <h1>Come portare Dexetera<br>da <em>zero presenza</em><br>a voce DeFi riconoscibile</h1>
 
     <p class="sub">
-      An organic-first strategy to build community, drive brand awareness,
-      and acquire active traders — without burning budget.
+      Una strategia organica in 3 fasi per costruire la community, far conoscere il prodotto
+      e acquisire i primi trader — senza bruciare budget.
     </p>
 
     <div class="cta-row">
-      <a href="#plan" class="btn btn-primary">View Strategy →</a>
-      <a href="#plan" class="btn btn-outline">View Timeline</a>
+      <a href="#piano" class="btn btn-primary">Vedi il piano →</a>
+      <a href="#canali" class="btn btn-outline">Vedi i canali</a>
     </div>
 
     <div class="stat-bar">
       <div class="stat-item">
         <span class="stat-val">3</span>
-        <span class="stat-label mono">PHASES</span>
+        <span class="stat-lbl mono">FASI</span>
       </div>
       <div class="stat-item">
         <span class="stat-val">€0</span>
-        <span class="stat-label mono">PAID ADS — PHASE 1</span>
+        <span class="stat-lbl mono">ADS FASE 1</span>
       </div>
       <div class="stat-item">
-        <span class="stat-val">6mo</span>
-        <span class="stat-label mono">ROADMAP HORIZON</span>
+        <span class="stat-val">6 mesi</span>
+        <span class="stat-lbl mono">ORIZZONTE</span>
       </div>
       <div class="stat-item">
         <span class="stat-val">100%</span>
-        <span class="stat-label mono">ORGANIC-FIRST</span>
+        <span class="stat-lbl mono">ORGANICO</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PROBLEM -->
-<section id="problem">
+<!-- PROBLEMA -->
+<section id="problema">
   <div class="wrap">
-    <div class="section-label mono">01 — THE PROBLEM</div>
-    <h2>Dexetera is technically exceptional.<br>Nobody knows it yet.</h2>
-    <p style="max-width:620px; margin-top:16px;">
-      The perp DEX space has matured fast. In 2025, attention is the scarcest resource —
-      and the protocols that capture it first compound that advantage. Here's what's at stake.
+    <div class="label mono">01 — IL PROBLEMA</div>
+    <h2>Il prodotto è ottimo.<br>Ma non lo sa nessuno.</h2>
+    <p style="max-width:580px; margin-top:14px;">
+      Dexetera ha caratteristiche tecniche difficili da trovare altrove. Il problema
+      è che senza presenza online nel crypto, un prodotto semplicemente non esiste.
     </p>
 
-    <div class="problem-grid">
-      <div class="problem-card">
+    <div class="grid-2">
+      <div class="card">
         <span class="icon">📡</span>
-        <h3>Zero Social Presence</h3>
-        <p>No Twitter, no Discord, no Mirror. A product that doesn't exist online doesn't exist in crypto. Full stop.</p>
+        <h3>Zero presenza social</h3>
+        <p>Nessun Twitter, nessun Discord, nessun blog. Nel mondo crypto, se non sei online non esiste il tuo prodotto, punto.</p>
       </div>
-      <div class="problem-card highlight">
+      <div class="card" style="border-color: rgba(0,229,160,.25); background: linear-gradient(135deg, rgba(0,229,160,.04), var(--surface));">
         <span class="icon">📈</span>
-        <h3>The Window Is Open — Now</h3>
-        <p>The perp DEX market grew <strong style="color:var(--accent)">654%</strong> in 2025. Hyperliquid already has an active community waiting for adjacent products. First-mover narrative matters enormously.</p>
+        <h3 style="color:var(--accent)">Il momento è adesso</h3>
+        <p>Il mercato dei perp DEX è cresciuto del <strong style="color:var(--accent)">654%</strong> nel 2025. Hyperliquid ha già una community attiva. Chi arriva prima si prende la narrativa.</p>
       </div>
-      <div class="problem-card">
+      <div class="card">
         <span class="icon">🌊</span>
-        <h3>Hyperliquid Has The Crowd</h3>
-        <p>An engaged builder and trader community already exists on Hyperliquid. Dexetera can intercept this audience directly — but only with deliberate positioning.</p>
+        <h3>Community Hyperliquid da intercettare</h3>
+        <p>C'è già un pubblico di builder e trader su Hyperliquid che cercano prodotti come Dexetera. Manca solo qualcuno che parli loro.</p>
       </div>
-      <div class="problem-card">
-        <span class="icon">🤫</span>
-        <h3>The Best Product Doesn't Win — The Best Story Does</h3>
-        <p>Gas-free trading, self-custody, any measurable asset as an underlying — the narrative writes itself. It just needs someone to write it.</p>
+      <div class="card">
+        <span class="icon">✍️</span>
+        <h3>Il miglior prodotto non vince sempre</h3>
+        <p>Gas-free, self-custody, qualsiasi asset come sottostante — la storia si scrive da sola. Qualcuno deve solo scriverla.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- NARRATIVE FRAMES -->
-<section id="frames">
+<!-- NARRATIVA -->
+<section id="narrativa">
   <div class="wrap">
-    <div class="section-label blue mono">02 — PRODUCT ANALYSIS</div>
-    <h2>Three Narrative Frames.<br>One Product.</h2>
-    <p style="max-width:600px; margin-top:16px;">
-      Dexetera has multiple strong angles. The key is deploying the right frame
-      to the right audience at the right moment in the funnel.
+    <div class="label blue mono">02 — COME RACCONTARE DEXETERA</div>
+    <h2>Tre modi di presentare<br>lo stesso prodotto.</h2>
+    <p style="max-width:580px; margin-top:14px;">
+      A seconda di chi stai parlando, Dexetera va raccontato in modo diverso.
+      L'angolazione giusta fa tutta la differenza.
     </p>
 
-    <div class="frames-grid">
-      <!-- Frame 1 -->
+    <div class="grid-3">
       <div class="frame-card">
-        <div class="frame-number">01</div>
-        <div class="frame-tag mono">FRAME 1 — AWARENESS</div>
-        <h3>"Trade Anything Measurable"</h3>
+        <div class="frame-tag mono">ANGOLO 1 — VIRALITÀ</div>
+        <h3>"Fai trading su qualsiasi cosa misurabile"</h3>
         <p>
-          The most provocative and viral angle. Futures on real estate prices,
-          social metrics, hyper-local commodities. Generates curiosity
-          <em style="color:var(--text)">outside</em> crypto — taps into a much broader audience
-          that doesn't know DeFi yet but instantly understands the concept.
+          L'angolo più provocatorio. Futures su prezzi immobiliari, metriche social, commodity di nicchia.
+          Genera curiosità anche <em style="color:var(--text)">fuori</em> dal mondo crypto — chiunque capisce l'idea al volo.
         </p>
-        <div class="frame-use">
-          <strong>→ Deploy in:</strong> Phase 1 tweetstorms, cold outreach, viral hooks
-        </div>
+        <div class="frame-when"><strong>→ Usare in:</strong> fase awareness, tweetstorm, hook virali</div>
       </div>
-      <!-- Frame 2 -->
       <div class="frame-card">
-        <div class="frame-number">02</div>
-        <div class="frame-tag mono">FRAME 2 — CONVERSION</div>
-        <h3>"DeFi Without DeFi's Problems"</h3>
+        <div class="frame-tag mono">ANGOLO 2 — CONVERSIONE</div>
+        <h3>"DeFi senza i problemi della DeFi"</h3>
         <p>
-          Targets traders burned by CEX (FTX lesson) and frustrated by gas fees
-          on existing DEXs. Dexetera solves both — on the highest-performance
-          blockchain of the moment. A direct answer to a real and felt pain.
+          Parla ai trader frustrati dai CEX (lezione FTX) e dalle fee di gas degli altri DEX.
+          Dexetera risolve entrambi, sulla blockchain più performante del momento.
         </p>
-        <div class="frame-use">
-          <strong>→ Deploy in:</strong> Waitlist landing, comparison threads, retargeting
-        </div>
+        <div class="frame-when"><strong>→ Usare in:</strong> landing waitlist, thread comparativi</div>
       </div>
-      <!-- Frame 3 -->
       <div class="frame-card">
-        <div class="frame-number">03</div>
-        <div class="frame-tag mono">FRAME 3 — BUILDERS</div>
-        <h3>"You Create The Market"</h3>
+        <div class="frame-tag mono">ANGOLO 3 — BUILDERS</div>
+        <h3>"Sei tu a creare il mercato"</h3>
         <p>
-          Built for developers and power users. No other DEX lets you list
-          any custom contract. Dexetera isn't just an exchange —
-          it's a <em style="color:var(--text)">platform</em>. The UGC engine
-          for an entirely new class of financial products.
+          Per developer e power user. Nessun altro DEX permette di listare contratti custom.
+          Non è solo un exchange — è una piattaforma aperta.
         </p>
-        <div class="frame-use">
-          <strong>→ Deploy in:</strong> Developer outreach, Discord, hackathons, technical content
-        </div>
+        <div class="frame-when"><strong>→ Usare in:</strong> Discord, hackathon, contenuti tecnici</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CHANNELS -->
-<section id="channels">
+<!-- CANALI -->
+<section id="canali">
   <div class="wrap">
-    <div class="section-label purple mono">03 — CHANNEL STRATEGY</div>
-    <h2>Channel Tier List —<br>Where To Focus First.</h2>
-    <p style="max-width:600px; margin-top:16px;">
-      With a lean budget, sequencing matters more than coverage.
-      High-impact, zero-cost channels come first. Everything else follows proven traction.
+    <div class="label mono" style="background:rgba(139,92,246,.07);border-color:rgba(139,92,246,.2);color:#a78bfa;">03 — CANALI</div>
+    <h2>Dove concentrare<br>gli sforzi.</h2>
+    <p style="max-width:580px; margin-top:14px;">
+      Con un budget piccolo, l'ordine conta più della quantità.
+      Prima i canali ad alto impatto e costo zero, poi tutto il resto.
     </p>
 
-    <!-- TIER 1 -->
-    <div class="tier-block tier1" style="margin-top:40px;">
-      <div class="tier-header">
-        <span class="tier-badge mono">TIER 1 — MANDATORY</span>
-        <span class="tier-desc">High impact · Zero cost · Start immediately</span>
+    <!-- T1 -->
+    <div class="tier-block t1">
+      <div class="tier-head">
+        <span class="tier-badge mono">TIER 1 — OBBLIGATORI</span>
+        <span class="tier-desc">Costo zero · Iniziare subito</span>
       </div>
-      <div class="channel-grid">
-        <div class="channel-card">
-          <div class="channel-name">𝕏 Twitter / X</div>
-          <div class="channel-note">Heart of the strategy. Weekly tweetstorms, active engagement in the Hyperliquid community, educational threads. The primary distribution layer for everything.</div>
+      <div class="ch-grid">
+        <div class="ch">
+          <div class="ch-name">𝕏 Twitter / X</div>
+          <div class="ch-note">Cuore della strategia. Un thread a settimana, engagement nella community Hyperliquid, contenuti educativi. È qui che si gioca tutto.</div>
         </div>
-        <div class="channel-card">
-          <div class="channel-name">💬 Discord</div>
-          <div class="channel-note">Community hub. Launch a <code style="font-size:.75rem;color:var(--accent)">#ideas-for-markets</code> channel as a UGC engine. Waitlist collection, early-access feedback, retention flywheel.</div>
+        <div class="ch">
+          <div class="ch-name">💬 Discord</div>
+          <div class="ch-note">Hub della community. Aprire un canale <code style="font-size:.74rem;color:var(--accent)">#ideas-for-markets</code> per raccogliere idee dagli utenti. Perfetto per la waitlist e il pre-lancio.</div>
         </div>
-        <div class="channel-card">
-          <div class="channel-name">✍️ Mirror.xyz</div>
-          <div class="channel-note">Native Web3 thought leadership. Technical articles, market analysis. Shareable on CT, indexes well, signals credibility. Zero cost to publish.</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- TIER 2 -->
-    <div class="tier-block tier2" style="margin-top:28px;">
-      <div class="tier-header">
-        <span class="tier-badge mono">TIER 2 — HIGH PRIORITY</span>
-        <span class="tier-desc">High organic upside · Start Month 1–2</span>
-      </div>
-      <div class="channel-grid four">
-        <div class="channel-card">
-          <div class="channel-name">▶️ YouTube</div>
-          <div class="channel-note">"I create a futures market on X in 60 seconds." Demo-first content. Performs organically in DeFi search.</div>
-        </div>
-        <div class="channel-card">
-          <div class="channel-name">🔴 Reddit</div>
-          <div class="channel-note">r/defi, r/hyperliquid, r/CryptoCurrency. Strategic posts, never spam. Long-form explanations work well here.</div>
-        </div>
-        <div class="channel-card">
-          <div class="channel-name">🟣 Farcaster / Lens</div>
-          <div class="channel-note">Decentralized social. DeFi-native audience. Early positioning as a protocol-aligned brand.</div>
-        </div>
-        <div class="channel-card">
-          <div class="channel-name">🚀 Product Hunt</div>
-          <div class="channel-note">Official launch with an active community behind it. Signals legitimacy to a tech-adjacent audience.</div>
+        <div class="ch">
+          <div class="ch-name">✍️ Mirror.xyz</div>
+          <div class="ch-note">Blog nativo Web3. Articoli tecnici, analisi di mercato. Zero costi, alta credibilità nel mondo DeFi, condivisibile su CT.</div>
         </div>
       </div>
     </div>
 
-    <!-- TIER 3 -->
-    <div class="tier-block tier3" style="margin-top:28px;">
-      <div class="tier-header">
-        <span class="tier-badge mono">TIER 3 — POST-LAUNCH</span>
-        <span class="tier-desc">Amplification layer · Activate after traction is proven</span>
+    <!-- T2 -->
+    <div class="tier-block t2" style="margin-top:24px;">
+      <div class="tier-head">
+        <span class="tier-badge mono">TIER 2 — ALTA PRIORITÀ</span>
+        <span class="tier-desc">Attivare nel mese 1–2</span>
       </div>
-      <div class="channel-grid four">
-        <div class="channel-card">
-          <div class="channel-name">📊 DeFiLlama / CoinGecko</div>
-          <div class="channel-note">Listing = legitimacy signal. Essential for organic discovery and protocol comparison.</div>
+      <div class="ch-grid four">
+        <div class="ch">
+          <div class="ch-name">▶️ YouTube</div>
+          <div class="ch-note">Video demo: "creo un futures su X in 60 secondi". Funziona bene organicamente su DeFi.</div>
         </div>
-        <div class="channel-card">
-          <div class="channel-name">📣 Telegram</div>
-          <div class="channel-note">International announcement channel. Low moderation effort, high reach for major updates.</div>
+        <div class="ch">
+          <div class="ch-name">🔴 Reddit</div>
+          <div class="ch-note">r/defi, r/hyperliquid, r/CryptoCurrency. Post strategici, mai spam. Il formato lungo funziona bene qui.</div>
         </div>
-        <div class="channel-card">
-          <div class="channel-name">🤝 Micro KOL</div>
-          <div class="channel-note">5k–50k follower partners. Early access in exchange for organic content. Volume-backed credibility.</div>
+        <div class="ch">
+          <div class="ch-name">🟣 Farcaster / Lens</div>
+          <div class="ch-note">Social decentralizzati. Pubblico DeFi-native, posizionamento come brand protocol-aligned.</div>
         </div>
-        <div class="channel-card">
-          <div class="channel-name">🎙️ Podcasts</div>
-          <div class="channel-note">Bankless, Unchained, mid-tier DeFi shows. Outreach once product is live and has real metrics.</div>
+        <div class="ch">
+          <div class="ch-name">🚀 Product Hunt</div>
+          <div class="ch-note">Lancio ufficiale con community già attiva. Segnale di legittimità per chi viene da fuori crypto.</div>
         </div>
       </div>
     </div>
 
-    <!-- NOT PRIORITY -->
-    <div class="tier-block tiern" style="margin-top:28px;">
-      <div class="tier-header">
-        <span class="tier-badge mono">NOT PRIORITIZED</span>
-        <span class="tier-desc">Wrong audience, legal friction, or insufficient budget</span>
+    <!-- T3 -->
+    <div class="tier-block t3" style="margin-top:24px;">
+      <div class="tier-head">
+        <span class="tier-badge mono">TIER 3 — POST-LANCIO</span>
+        <span class="tier-desc">Solo dopo aver dimostrato trazione</span>
       </div>
-      <div class="channel-grid">
-        <div class="channel-card">
-          <div class="channel-name">📸 Instagram</div>
-          <div class="channel-note">Wrong demographic for a technical DeFi product. Visual-first format doesn't suit the message.</div>
+      <div class="ch-grid four">
+        <div class="ch">
+          <div class="ch-name">📊 DeFiLlama / CoinGecko</div>
+          <div class="ch-note">Listing = credibilità immediata. Essenziale per la scoperta organica.</div>
         </div>
-        <div class="channel-card">
-          <div class="channel-name">🎵 TikTok</div>
-          <div class="channel-note">Only viable with a dedicated on-camera team member. Don't start a channel you can't maintain consistently.</div>
+        <div class="ch">
+          <div class="ch-name">📣 Telegram</div>
+          <div class="ch-note">Canale annunci internazionale. Poco sforzo di moderazione, alta portata per aggiornamenti importanti.</div>
         </div>
-        <div class="channel-card">
-          <div class="channel-name">📢 Google / Meta Ads</div>
-          <div class="channel-note">Legal restrictions on crypto financial products (EU, US). Budget insufficient for meaningful ROAS even if compliant.</div>
+        <div class="ch">
+          <div class="ch-name">🤝 Micro KOL</div>
+          <div class="ch-note">Partner con 5k–50k follower. Accesso anticipato in cambio di contenuto organico.</div>
+        </div>
+        <div class="ch">
+          <div class="ch-name">🎙️ Podcast DeFi</div>
+          <div class="ch-note">Outreach a Bankless, Unchained e show di medio livello. Solo quando hai metriche reali da mostrare.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TN -->
+    <div class="tier-block tn" style="margin-top:24px;">
+      <div class="tier-head">
+        <span class="tier-badge mono">NON PRIORITARI</span>
+        <span class="tier-desc">Pubblico sbagliato o restrizioni legali</span>
+      </div>
+      <div class="ch-grid">
+        <div class="ch">
+          <div class="ch-name">📸 Instagram</div>
+          <div class="ch-note">Demografica sbagliata per un prodotto DeFi tecnico. Il formato visivo non si adatta al messaggio.</div>
+        </div>
+        <div class="ch">
+          <div class="ch-name">🎵 TikTok</div>
+          <div class="ch-note">Solo se c'è qualcuno nel team dedicato a fare video on-camera. Non aprire un canale che non si riesce a mantenere.</div>
+        </div>
+        <div class="ch">
+          <div class="ch-name">📢 Google / Meta Ads</div>
+          <div class="ch-note">Restrizioni legali su prodotti crypto (EU, USA). Il budget non è sufficiente per avere un ritorno decente.</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PLAN -->
-<section id="plan">
+<!-- PIANO -->
+<section id="piano">
   <div class="wrap">
-    <div class="section-label mono">04 — EXECUTION PLAN</div>
-    <h2>Three Phases.<br>One Clear Direction.</h2>
-    <p style="max-width:600px; margin-top:16px;">
-      A sequenced, milestone-driven plan designed to compound. Each phase
-      builds the infrastructure the next one requires.
+    <div class="label mono">04 — IL PIANO</div>
+    <h2>Tre fasi.<br>Un obiettivo per volta.</h2>
+    <p style="max-width:580px; margin-top:14px;">
+      Ogni fase costruisce le fondamenta per quella successiva.
+      Niente viene bruciato, tutto si accumula.
     </p>
 
     <div class="timeline">
-      <div class="timeline-track">
+      <div class="tl-track">
 
-        <!-- PHASE 1 -->
-        <div class="phase-col">
-          <div class="phase-node mono">P1</div>
-          <div class="phase-card">
-            <div class="phase-timing mono">NOW → LAUNCH DAY</div>
-            <div class="phase-title">Pre-Launch / Waitlist</div>
-            <div class="phase-goal">Objective: exist online, build credibility, grow the waitlist before a single trade is made.</div>
-            <ul class="phase-actions">
-              <li>Create Twitter/X with optimized bio and pinned thread</li>
-              <li>Open Discord with core channels + #ideas-for-markets</li>
-              <li>Publish first Mirror.xyz: "Why DeFi is still broken"</li>
-              <li>Launch weekly tweetstorm cadence (1 thread/week)</li>
-              <li>Active engagement in Hyperliquid community</li>
+        <div class="ph-col">
+          <div class="ph-node mono">F1</div>
+          <div class="ph-card">
+            <div class="ph-timing mono">ORA → LANCIO</div>
+            <div class="ph-title">Pre-lancio / Waitlist</div>
+            <div class="ph-goal">Obiettivo: esistere online, raccogliere la waitlist, costruire credibilità prima ancora di aprire.</div>
+            <ul class="ph-actions">
+              <li>Aprire Twitter/X con bio ottimizzata e thread pinned</li>
+              <li>Aprire Discord con canali base + #ideas-for-markets</li>
+              <li>Primo articolo Mirror.xyz: "Perché la DeFi è ancora rotta"</li>
+              <li>Avviare un thread a settimana su Twitter</li>
+              <li>Engagement attivo nella community Hyperliquid</li>
             </ul>
             <div class="kpi-block">
-              <div class="kpi-label mono">TARGET KPIs</div>
+              <div class="kpi-lbl mono">OBIETTIVI</div>
               <div class="kpi-list">
-                <div class="kpi-item">1,000 Twitter followers</div>
-                <div class="kpi-item">300+ waitlist signups</div>
-                <div class="kpi-item">200 Discord members</div>
+                <div class="kpi-item">1.000 follower Twitter</div>
+                <div class="kpi-item">300+ iscritti waitlist</div>
+                <div class="kpi-item">200 membri Discord</div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- PHASE 2 -->
-        <div class="phase-col">
-          <div class="phase-node mono">P2</div>
-          <div class="phase-card">
-            <div class="phase-timing mono">MONTHS 1–3 POST-LAUNCH</div>
-            <div class="phase-title">Brand Awareness</div>
-            <div class="phase-goal">Objective: become known in DeFi as "the one that does custom markets." Build the content engine.</div>
-            <ul class="phase-actions">
-              <li>1 thread/week + "Market of the Week" spotlight</li>
-              <li>1 Mirror.xyz article + 1 YouTube video per month</li>
-              <li>Outreach to 20 DeFi publications (The Block, Decrypt)</li>
-              <li>Partnership narratives with non-crypto verticals</li>
-              <li>Reddit presence — r/defi, r/hyperliquid</li>
+        <div class="ph-col">
+          <div class="ph-node mono">F2</div>
+          <div class="ph-card">
+            <div class="ph-timing mono">MESI 1–3 DAL LANCIO</div>
+            <div class="ph-title">Brand Awareness</div>
+            <div class="ph-goal">Obiettivo: diventare "quello che fa i mercati custom" nel mondo DeFi. Costruire il motore dei contenuti.</div>
+            <ul class="ph-actions">
+              <li>1 thread/settimana + "mercato della settimana" in evidenza</li>
+              <li>1 articolo Mirror.xyz + 1 video YouTube al mese</li>
+              <li>Outreach a 20 pubblicazioni DeFi (The Block, Decrypt…)</li>
+              <li>Partnership narrative con comunità non-crypto</li>
+              <li>Presenza su Reddit nei subreddit giusti</li>
             </ul>
             <div class="kpi-block">
-              <div class="kpi-label mono">TARGET KPIs</div>
+              <div class="kpi-lbl mono">OBIETTIVI</div>
               <div class="kpi-list">
-                <div class="kpi-item">5,000 Twitter followers</div>
-                <div class="kpi-item">500 Discord members</div>
-                <div class="kpi-item">3 external press mentions</div>
-                <div class="kpi-item">10+ user-created markets</div>
+                <div class="kpi-item">5.000 follower Twitter</div>
+                <div class="kpi-item">500 membri Discord</div>
+                <div class="kpi-item">3 menzioni su pubblicazioni esterne</div>
+                <div class="kpi-item">10+ mercati creati dagli utenti</div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- PHASE 3 -->
-        <div class="phase-col">
-          <div class="phase-node mono">P3</div>
-          <div class="phase-card">
-            <div class="phase-timing mono">MONTHS 3–6+</div>
-            <div class="phase-title">Active Trader Acquisition</div>
-            <div class="phase-goal">Objective: convert awareness into trading volume. Activate referral loops and targeted amplification.</div>
-            <ul class="phase-actions">
-              <li>Referral program with fee-sharing on referred volume</li>
-              <li>"Create-a-market" Twitter challenge with hashtag</li>
-              <li>Tier-2 KOL partnerships with real volume metrics</li>
-              <li>X/Twitter Ads (€200–300/mo) amplifying top posts only</li>
-              <li>DeFiLlama + CoinGecko listing for discovery</li>
+        <div class="ph-col">
+          <div class="ph-node mono">F3</div>
+          <div class="ph-card">
+            <div class="ph-timing mono">MESI 3–6+</div>
+            <div class="ph-title">Acquisizione Trader</div>
+            <div class="ph-goal">Obiettivo: trasformare l'awareness in volume di trading reale. Attivare i loop di riferimento.</div>
+            <ul class="ph-actions">
+              <li>Programma referral con fee-sharing sul volume portato</li>
+              <li>Challenge "crea-un-mercato" su Twitter con hashtag</li>
+              <li>Partnership KOL con metriche di volume reali</li>
+              <li>X Ads (€200–300/mese) solo sui post già performanti</li>
+              <li>Listing su DeFiLlama e CoinGecko</li>
             </ul>
             <div class="kpi-block">
-              <div class="kpi-label mono">TARGET KPIs</div>
+              <div class="kpi-lbl mono">OBIETTIVI</div>
               <div class="kpi-list">
-                <div class="kpi-item">Monthly trading volume (measured)</div>
-                <div class="kpi-item">Waitlist → active trader CVR</div>
-                <div class="kpi-item">Referral % of new volume</div>
+                <div class="kpi-item">Volume mensile misurabile</div>
+                <div class="kpi-item">% conversione waitlist → trader</div>
+                <div class="kpi-item">Referral % sul nuovo volume</div>
               </div>
             </div>
           </div>
@@ -768,45 +634,41 @@
   </div>
 </section>
 
-<!-- NOTES / WARNINGS -->
-<section id="notes">
+<!-- NOTE -->
+<section id="note">
   <div class="wrap">
-    <div class="section-label warn mono">05 — HONEST ADVISORY</div>
-    <h2>Critical Notes Before<br>We Begin.</h2>
-    <p style="max-width:600px; margin-top:16px;">
-      Good strategy includes the things you'd rather not hear. These three points
-      are not blockers — but ignoring them will cost more than addressing them now.
+    <div class="label warn mono">05 — COSE DA TENERE A MENTE</div>
+    <h2>Tre punti che non bisogna<br>ignorare.</h2>
+    <p style="max-width:580px; margin-top:14px;">
+      Detto tra amici: queste tre cose possono compromettere anche la migliore strategia se non vengono affrontate.
     </p>
 
-    <div class="warn-grid">
+    <div class="grid-3" style="margin-top:32px;">
       <div class="warn-card">
-        <div class="warn-badge mono">⚠ RISK · TEAM</div>
-        <h3>Pseudonymous Team</h3>
+        <div class="warn-badge mono">⚠ TEAM</div>
+        <h3>Team con pseudonimi</h3>
         <p>
-          Operating under pseudonyms (Richard, Dexter) carries real reputational risk in 2025 post-FTX.
-          The DeFi community is increasingly demanding accountability. Even partial professional
-          background disclosure — a LinkedIn, a track record, a VC reference — would
-          significantly increase trust and conversion across every channel.
+          Operare sotto pseudonimi (Richard, Dexter) è un rischio reputazionale concreto nel 2025 post-FTX.
+          Anche solo un background professionale parziale — un LinkedIn, un track record — aumenta
+          enormemente la fiducia nella community DeFi.
         </p>
       </div>
       <div class="warn-card">
-        <div class="warn-badge mono">⚠ RISK · PRODUCT</div>
-        <h3>Product Before Marketing</h3>
+        <div class="warn-badge mono">⚠ PRODOTTO</div>
+        <h3>Prima il prodotto, poi il marketing</h3>
         <p>
-          Over-marketing before the platform is stable is the most common DeFi launch mistake.
-          A bad experience on day one spreads on CT within hours and takes months to recover from.
-          The strategy only works if the product delivers on launch. We'd rather delay
-          Phase 2 by 4 weeks than rush it with a shaky product underneath.
+          Fare troppo rumore prima che la piattaforma sia stabile è l'errore più comune.
+          Un'esperienza negativa al lancio si diffonde su CT in poche ore.
+          Meglio aspettare di avere un prodotto solido sotto.
         </p>
       </div>
       <div class="warn-card">
-        <div class="warn-badge mono">⚠ RISK · LEGAL</div>
-        <h3>Compliance on Paid Ads</h3>
+        <div class="warn-badge mono">⚠ LEGALE</div>
+        <h3>Ads su crypto: attenzione</h3>
         <p>
-          Google Ads and Meta Ads for financial/crypto products face variable legal restrictions
-          across markets — EU, US, and others. Phase 3 includes a small ads budget, but
-          <strong style="color:var(--text)">legal review must precede any paid campaign activation</strong>.
-          This is not optional — it's a compliance requirement that varies by jurisdiction.
+          Google e Meta hanno restrizioni variabili per paese sui prodotti finanziari/crypto (EU, USA).
+          Prima di attivare qualsiasi campagna pagata va fatto un controllo legale.
+          Non è facoltativo.
         </p>
       </div>
     </div>
@@ -816,58 +678,44 @@
 <!-- FOOTER -->
 <section id="footer">
   <div class="wrap">
-    <div class="footer-cta-label mono">READY WHEN YOU ARE</div>
-    <h2>Let's Build Dexetera's<br>Presence — Together.</h2>
+    <div class="label mono" style="display:inline-flex;margin-bottom:16px;">PRONTI QUANDO VUOI</div>
+    <h2>Costruiamo la presenza<br>di Dexetera insieme.</h2>
     <p>
-      This proposal was developed as a concrete, phase-by-phase marketing roadmap —
-      not a generic deck. Every recommendation is scoped to Dexetera's actual product,
-      budget, and market position.
+      Questa proposta è stata costruita attorno al prodotto reale di Dexetera,
+      al suo pubblico e al budget disponibile. Niente template generici.
     </p>
-
     <div class="cta-row" style="justify-content:center;">
-      <a href="https://dexetera.org" target="_blank" class="btn btn-primary">Visit Dexetera.org →</a>
-      <a href="mailto:hello@youragency.com" class="btn btn-outline">Contact the Agency</a>
+      <a href="https://dexetera.org" target="_blank" class="btn btn-primary">Visita Dexetera.org →</a>
+      <a href="mailto:hello@youragency.com" class="btn btn-outline">Contattaci</a>
     </div>
-
     <a href="https://dexetera.org" target="_blank" class="footer-link mono">
       dexetera.org — Trade Anything Measurable ↗
     </a>
-    <p class="footer-meta">
-      Proposal prepared by [Nome Agenzia] · Digital Marketing for Web3 &amp; DeFi · 2025
-    </p>
+    <p class="footer-note">Proposta preparata da [Nome] · 2025</p>
   </div>
 </section>
 
 <script>
-  // Smooth active nav highlighting
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav-links a');
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        navLinks.forEach(a => {
-          a.style.color = a.getAttribute('href') === '#' + entry.target.id
-            ? 'var(--accent)' : '';
-        });
-      }
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) navLinks.forEach(a => {
+        a.style.color = a.getAttribute('href') === '#' + e.target.id ? 'var(--accent)' : '';
+      });
     });
   }, { threshold: 0.3 });
-
   sections.forEach(s => observer.observe(s));
 
-  // Subtle card tilt on hover (desktop only)
   if (window.matchMedia('(hover: hover)').matches) {
-    document.querySelectorAll('.frame-card, .phase-card').forEach(card => {
+    document.querySelectorAll('.frame-card, .ph-card').forEach(card => {
       card.addEventListener('mousemove', e => {
         const r = card.getBoundingClientRect();
         const x = (e.clientX - r.left) / r.width - 0.5;
         const y = (e.clientY - r.top) / r.height - 0.5;
-        card.style.transform = `perspective(600px) rotateY(${x * 4}deg) rotateX(${-y * 4}deg) translateY(-4px)`;
+        card.style.transform = `perspective(600px) rotateY(${x*4}deg) rotateX(${-y*4}deg) translateY(-3px)`;
       });
-      card.addEventListener('mouseleave', () => {
-        card.style.transform = '';
-      });
+      card.addEventListener('mouseleave', () => card.style.transform = '');
     });
   }
 </script>
